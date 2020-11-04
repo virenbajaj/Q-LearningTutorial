@@ -60,13 +60,17 @@ The algorithm will be simplified and further explained in the example prose belo
 
 # Sample Problem
 In this tutorial I will illustrate how this algorithm, i.e, finding an optimal action selection policy for a finite MDP, works to find the best path from a one vertex in a graph to another. To solidy the problem more, consider a building with 5 rooms, with some doors that connect the rooms, while some of the them open up to the outside of the building. Our goal in this problem is to find a way out of the building, given we are placed in a given room. Specifically, consider this set up:
-![alt text](files/building_pic.gif)
+
+![alt text](building_pic.gif)
+
 Clearly, this can be represented as a graph with each room as a vertex and a door as a bi-directional edge. And so our problem is to find a graph path to the goal state, which is represented by vertex 5 in the following graph repsentation of the building:
-![alt text](files/graph1.gif)
+
+![alt text](graph1.gif)
+
 Now, notice that world of states, S, is the set of vertices, which represent the rooms.
 The set of possible actions, A, is represented by the outgoing edges from a vertex, which correspond to travelling from one room to another through the door connecting the two. 
 And so, next, we must assign a Reward function R(s,a). We set R(s,a) = 100 for all those actions which take s to the goal state = 5, and 0 otherwise. These rewards become the edge weights, as represented by the following graph:
-![alt text](files/graph2.gif)
+![alt text](graph2.gif)
 
 # Reward/Environment Matrix
 Notice that a graph of this sort can be represented by a 5x5 reward matrix in which the row index, i, represents the current state, column index, j, the final state by going through the door connecting the room i to the room j, and the value at (i,j) the reward. Since we knew all the states a priori, we can initialize this 5x5 matrix, but even we didnt know all the states, we can just program the code to add another column when it discovers a new state.This type of code is capable of handling a large amount of unkown states and probably is more data driven. We represent the impossible actions(non-existent edges), like going directly from room 2 to 4, by 'None' values in the matrix.
@@ -339,12 +343,11 @@ run_session()
 # Analysis of Results
 As you can see the values of the Q-Matrix converge as the number of episodes increase. 
 The Q-matrix optimized for g = 0.8 is:
-![alt text](files/finMatrix.gif)
+![alt text](finMatrix.gif)
 We can normalize the values of the Q-Matrix with the highest reward(500) to get:
-![alt text](files/normFinMatrix.gif)
-
+![alt text](normFinMatrix.gif)
 Finally, to illustrate the shortest path from room 2 to 5 using the Q-Matrix values:
-![alt text](files/finGraph.gif)
+![alt text](finGraph.gif)
 
 This represents the path (2,3,1,5) or (2,3,4,5), which are equivalent and correct (look at the pictures of the room at the top to verify).
 
