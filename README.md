@@ -2,9 +2,9 @@
 #  Q Learning!
 ______________________
 
-**Q Learning is a type of unsupervised reinforcement learning technique.**
+- Q Learning is a type of unsupervised reinforcement learning technique.
 
-**Reinforcement Learning is a class of machine learning algorithms in which the the program determines the ideal behavior within a specific context based on reward feedback for a transition from a given state to another.** 
+- Reinforcement Learning is a class of machine learning algorithms in which the the program determines the ideal behavior within a specific context based on reward feedback for a transition from a given state to another.
 
 In this tutorial we learn how to find an optimal path from one node of a graph to another using Q-learning. But before we get into that, here is a little motivation and theoretical introduction:
 
