@@ -8,6 +8,7 @@ ______________________
 
 In this tutorial we learn how to find an optimal path from one node of a graph to another using Q-learning. But before we get into that, here is a little motivation and theoretical introduction:
 
+
 ## Humans vs. Deep Q-networks 
 
 Q-learning algorithms were used in Google's DeepMind to develop the so called "deep Q-networks".Using only pixel data and the game score as inputs, this algorithm learned 49 Atari 2600 games and proved to be as succesful as expert humans. A paper about the same was published in Nature in February 2015.(linked here : http://www.nature.com/nature/journal/v518/n7540/full/nature14236.html - look at the videos linked on the website!)
@@ -59,7 +60,7 @@ The algorithm will be simplified and further explained in the example prose belo
 
 
 # Sample Problem
-In this tutorial I will illustrate how this algorithm, i.e, finding an optimal action selection policy for a finite MDP, works to find the best path from a one vertex in a graph to another. To solidy the problem more, consider a building with 5 rooms, with some doors that connect the rooms, while some of the them open up to the outside of the building. Our goal in this problem is to find a way out of the building, given we are placed in a given room. Specifically, consider this set up:
+In this tutorial I will illustrate how this algorithm, i.e, finding an optimal action selection policy for a finite MDP, works to find the best path from a one vertex in a graph to another. The problem formulation and images below are taken from [here](http://mnemstudio.org/path-finding-q-learning-tutorial.htm). To solidy the problem more, consider a building with 5 rooms, with some doors that connect the rooms, while some of the them open up to the outside of the building. Our goal in this problem is to find a way out of the building, given we are placed in a given room. Specifically, consider this set up:
 
 ![alt text](building_pic.gif)
 
